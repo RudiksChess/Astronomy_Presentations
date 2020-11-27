@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stylish Article
+% LaTeX Template
+% Version 2.2 (2020-10-22)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) 
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[fleqn,10pt]{SelfArx} % Document font size and equations flushed left
+
+\usepackage[spanish]{babel} % Specify a different language here - english by default
+\usepackage{apalike}
+\usepackage{comment} % Allows us to comment parts out of the code.
+%----------------------------------------------------------------------------------------
+%	COLUMNS
+%----------------------------------------------------------------------------------------
+
+\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
+\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
+
+%----------------------------------------------------------------------------------------
+%	COLORS
+%----------------------------------------------------------------------------------------
+
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+
+%----------------------------------------------------------------------------------------
+%	HYPERLINKS
+%----------------------------------------------------------------------------------------
+
+\usepackage{hyperref} % Required for hyperlinks
+
+\hypersetup{
+	hidelinks,
+	colorlinks,
+	breaklinks=true,
+	urlcolor=color2,
+	citecolor=color1,
+	linkcolor=color1,
+	bookmarksopen=false,
+	pdftitle={Title},
+	pdfauthor={Author},
+}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\JournalInfo{Introducción a la Astronomía} % Journal information
+\Archive{Noviembre de 2020} % Additional notes (e.g. copyright, DOI, review/research article)
+
+\PaperTitle{Características de cuerpos estelares en la región central de la Vía Láctea} % Article title
+
+\Authors{Rudik Rompich\textsuperscript{1}*, Baptiste Bauer\textsuperscript{1}**} % Authors
+\affiliation{\textsuperscript{1}\textit{Departamento de Física, Universidad del Valle de Guatemala, Guatemala}} % Author affiliation
+\affiliation{\,*\textbf{Correo de contacto}: rom19857@uvg.edu.gt}
+\affiliation{**\textbf{Correo de contacto}: bau171501@uvg.edu.gt}
+% Corresponding author
+
+\Keywords{Cuerpos estelares --- Centro de la Vía Láctea --- Infrarojo cercano} % Keywords - if you don't want any simply remove all the text between the curly brackets
+\newcommand{\keywordname}{Keywords} % Defines the keywords heading name
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\Abstract{Analizamos las características de dos cuerpos estelares presentes en la región del centro de la Vía Láctea. Las imágenes fueron tomadas en el infrarrojo cercano En base a los datos reportados en el catálogo de \textit{Two Micron All-Sky Survey (2MASS)} y medidos por el satélite Gaia, presentamos para las dos estrellas sus coordenadas, colores, temperaturas, disctancias, luminosidades, flujos, tamaños, tipos espectrales, clases espectrales y sus ubicaciones en el diagrama HR. Una parte de estos resultados decaen del supuesto que los cuerpos estudiados son estrellas de la secuencia principal del diagrama de Hertzsprung-Russell.}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Output the title and abstract box
+
+%\tableofcontents % Output the contents section
+
+\thispagestyle{empty} % Removes page numbering from the first page
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\input{Secciones/1} 
+\input{Secciones/2} 
+\input{Secciones/3} 
+\input{Secciones/4} 
+\input{Secciones/5} 
+\input{Secciones/6} 
+\input{Secciones/7} 
+
+
+%------------------------------------------------
+
+
+
+%---------------------------------------------
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+\phantomsection
+\bibliographystyle{apalike}
+\bibliography{sample.bib}
+
+
+\end{document}

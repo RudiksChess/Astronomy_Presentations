@@ -1,0 +1,52 @@
+\section*{METODOLOGÍA}\label{sec:analisis}
+\addcontentsline{toc}{section}{METODOLOGÍA}
+
+
+Primero se determinarón las coordenadas ecuatoriales y la magnitud aparente de la estrellas dadas por el \textit{software SAOImageDS9} extraídas de las Figuras \ref{fig:estrella-rudik} y \ref{fig:estrella-bapt} proporcionadas por \cite{lopez2019quiescent}.\\
+
+Con las coordenadas ecuatoriales, se busca el paralaje en la página oficial del telescopio Gaia (Gaia Archive). \footnote{\url{https://gea.esac.esa.int/archive/}}\\
+\begin{align}
+    d&=\frac{1}{p}\\
+    p&=\text{paralaje}*10^{-3}
+\end{align}
+De \cite{lol:cohen2003spectral}, sabemos que la longitud de onda central de la banda K$_s$, en la cual se realizó la medición, es de $\lambda=2.159\mu m$, además que la densidad de flujo es de $F_x^0=4.283Wcm^{-2}\mu m^{-1}$. Para obtener el flujo, multiplicamos a la densidad de flujo por $\lambda$: al convertir las unidades a las estándares del Sistema Internacional, $\lambda F_x^0=9.4226*10^{-10} Wm^{-2}$. Encontramos el flujo: 
+\begin{align}
+    m_x=-2.5\log_{10}\left(\frac{F_x}{F_x^0}\right) \Rightarrow F_x=F_x^0 10^{-\frac{m_x}{2.5}}
+\end{align}
+\begin{align}
+    F_x= 9.4226*10^{-10}*10^{-\frac{11.202}{2.5}}=3.114*10^{-14} W/m^2
+\end{align}
+Con el flujo, podemos encontrar la luminosidad aparente:
+\begin{align}
+    L=F*A=F*4\pi W
+\end{align}
+Se sabe que $=L_\odot=3.828*10^{26}$W:
+\begin{align}
+    \text{Luminosidad comparado al sol}=\frac{L}{L_\odot}
+\end{align}
+
+La luminosidad de la estrella nos da un valor específico \textit{x} veces mayor o menor a la del Sol. Si asumimos su posición en el diagrama de Hertzsprung-Russell, se estima que la temperatura de la estrella debe ser de  cierta cantidad de Kelvins. 
+\begin{align}
+    T = \text{temperatura supuesta } K 
+\end{align}
+
+Con este dato, podemos encontrar al radio de la estrella: usamos a la ley de radiación de un cuerpo negro:
+\begin{align}
+    F=\frac{L}{A}=\frac{L}{4\pi R^2}=\sigma T^4
+\end{align}
+
+\begin{align}
+    R=\sqrt{\frac{L}{4\pi \sigma T^4}}m
+\end{align}
+
+Se sabe que el radio del Sol es $R_\odot=696340*10^3$m
+\begin{equation*}
+    \text{Radio comparado al sol}=\frac{R}{R_\odot}
+\end{equation*}
+
+Con la temperatura, también podemos encontrar el color de la estrella: en donde $b=2.897771955*10^{-3}$mK.
+\begin{align}
+    \lambda_{max}=\frac{b}{T}
+\end{align}
+
+Para el cálculo de las propiedades de las estrellas fue necesario desarrollar un código que fue alojado en Github\footnote{\url{https://github.com/RudiksChess/Astronomy_Presentations/blob/main/Calculos.ipynb}}.
